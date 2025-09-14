@@ -1,0 +1,20 @@
+[Unit]
+Description=Etisalat Application Logs Portal (Flask)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/etisalat_logs_portal
+# Adjust the ExecStart to point to your virtualenv python and app entry
+ExecStart=/opt/venv/bin/python /opt/etisalat_logs_portal/app.py
+Restart=always
+Environment=FLASK_ENV=production
+Environment=FLASK_SECRET_KEY=change_this_secret_key
+# Example for SMTP/DB overrides
+# Environment=SMTP_HOST=smtp.example.com
+# Environment=SMTP_PORT=587
+
+[Install]
+WantedBy=multi-user.target

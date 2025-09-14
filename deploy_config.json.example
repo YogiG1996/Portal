@@ -1,0 +1,15 @@
+{
+  "db_overrides": {
+    "b2c_frontend": "postgresql+psycopg2://user:pass@host:5432/b2c_frontend",
+    "b2c_selfcare": "postgresql+psycopg2://user:pass@host:5432/b2c_selfcare",
+    "magento": "mysql+pymysql://user:pass@host:3306/magento"
+  },
+  "smtp": {
+    "host": "smtp.example.com",
+    "port": 587,
+    "user": "smtp_user",
+    "password": "smtp_password",
+    "use_tls": true,
+    "from": "noreply@example.com"
+  }
+}

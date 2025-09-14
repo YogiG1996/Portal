@@ -1,0 +1,44 @@
+{
+  "fe_uat": {
+    "display_name": "FE DB UAT",
+    "connection_string": "${DB_URI_FE_UAT}",
+    "db_type": "oracle",
+    "select_query": "SELECT * FROM b2c_audit_log WHERE (:jsid IS NULL OR JSESSION_ID LIKE :jsid) AND STATR_TIME BETWEEN :start_time AND :end_time ORDER BY ID DESC",
+    "fields": ["ID","JSESSION_ID","STATR_TIME","MESSAGE","LEVEL"]
+  },
+  "fe_pd": {
+    "display_name": "FE DB PD",
+    "connection_string": "${DB_URI_FE_PD}", 
+    "db_type": "oracle",
+    "select_query": "SELECT * FROM b2c_audit_log WHERE (:jsid IS NULL OR JSESSION_ID LIKE :jsid) AND STATR_TIME BETWEEN :start_time AND :end_time ORDER BY ID DESC",
+    "fields": ["ID","JSESSION_ID","STATR_TIME","MESSAGE","LEVEL"]
+  },
+  "magento_uat": {
+    "display_name": "Magento UAT",
+    "connection_string": "${DB_URI_MAGENTO_UAT}",
+    "db_type": "mysql",
+    "select_query": "SELECT * FROM outbound_call_log WHERE (:backend_system IS NULL OR backend_system = :backend_system) AND (:channel IS NULL OR channel = :channel) AND created_at BETWEEN :start_time AND :end_time ORDER BY id DESC",
+    "fields": ["id","backend_system","channel","payload","created_at"]
+  },
+  "magento_pd": {
+    "display_name": "Magento PD",
+    "connection_string": "${DB_URI_MAGENTO_PD}",
+    "db_type": "mysql",
+    "select_query": "SELECT * FROM outbound_call_log WHERE (:backend_system IS NULL OR backend_system = :backend_system) AND (:channel IS NULL OR channel = :channel) AND created_at BETWEEN :start_time AND :end_time ORDER BY id DESC",
+    "fields": ["id","backend_system","channel","payload","created_at"]
+  },
+  "selfcare_uat": {
+    "display_name": "SELFCARE UAT",
+    "connection_string": "${DB_URI_SELFCARE_UAT}",
+    "db_type": "oracle",
+    "select_query": "SELECT * FROM test_transactions_logger WHERE (:sc_transaction_id IS NULL OR SC_TRANSACTION_ID = :sc_transaction_id) AND AUDIT_TIMESTAMP BETWEEN :start_time AND :end_time ORDER BY AUDIT_TIMESTAMP DESC",
+    "fields": ["id","sc_transaction_id","event_time","status","payload"]
+  },
+  "selfcare_pd": {
+    "display_name": "SELFCARE PD",
+    "connection_string": "${DB_URI_SELFCARE_PD}",
+    "db_type": "oracle",
+    "select_query": "SELECT * FROM test_transactions_lgr_be WHERE (:transaction_id IS NULL OR TRANSACTION_ID = :transaction_id) AND AUDIT_TIMESTAMP BETWEEN :start_time AND :end_time ORDER BY AUDIT_TIMESTAMP DESC",
+    "fields": ["id","transaction_id","event_time","status","payload"]
+  }
+}

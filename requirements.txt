@@ -1,0 +1,10 @@
+Flask==3.0.0
+SQLAlchemy==2.0.29
+python-dotenv==1.0.1
+pandas>=2.2.3
+XlsxWriter==3.2.6
+# DB drivers for production environments (install only if needed)
+# For Oracle: use 'cx_Oracle' or the modern 'oracledb' package (requires Instant Client on Windows)
+cx_Oracle
+# For MySQL connections via SQLAlchemy
+pymysql

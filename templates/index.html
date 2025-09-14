@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Etisalat Application Logs Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <header class="app-header">
+    <div class="brand left">
+      <div class="badge">
+        {% if site.logo %}
+          <img src="{{ site.logo }}" alt="{{ site.logo_alt }}" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-missing');"/>
+        {% else %}
+          <img src="{{ url_for('static', filename='img/logo.png') }}" alt="{{ site.logo_alt or 'Logo' }}" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('logo-missing');"/>
+        {% endif %}
+        <!-- Inline SVG fallback (shown when image fails) -->
+        <svg class="badge-fallback" viewBox="0 0 100 60" aria-hidden="true" focusable="false">
+          <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="48" fill="#ff2d35">e&</text>
+        </svg>
+      </div>
+      <h1>{{ site.title or 'Etisalat Application Logs Portal' }}</h1>
+    </div>
+    <p class="subtitle">Search failure logs quickly across applications</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <form id="logForm" action="{{ url_for('query') }}" method="POST" novalidate>
+        <div class="grid">
+          <div class="form-group">
+            <label for="application">Application</label>
+            <select id="application" name="application" required>
+              <option value="" disabled selected>Select application</option>
+              {% for app in applications %}
+                <option value="{{ app }}" {% if selected == app %}selected{% endif %}>{{ app }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="jsession_id">JSession ID</label>
+            <input id="jsession_id" name="jsession_id" type="text" placeholder="Enter JSession ID" />
+            <small class="hint">Optional. Filters to a specific session if provided.</small>
+          </div>
+
+          <!-- Extra per-app filters: Magento (backend_system, channel) and SELFCARE (transaction ids) -->
+          <div id="extraFilters" style="display:none; width:100%;">
+            <div id="magentoFilters" style="display:none;">
+              <div class="form-group">
+                <label for="backend_system">Backend System</label>
+                <input id="backend_system" name="backend_system" type="text" placeholder="e.g. Test" value="{{ request.form.get('backend_system','') }}" />
+              </div>
+              <div class="form-group">
+                <label for="channel">Channel</label>
+                <input id="channel" name="channel" type="text" placeholder="e.g. web" value="{{ request.form.get('channel','') }}" />
+              </div>
+            </div>
+
+            <div id="selfcareFilters" style="display:none;">
+              <div class="form-group">
+                <label for="sc_transaction_id">SELFCARE SC Transaction ID</label>
+                <input id="sc_transaction_id" name="sc_transaction_id" type="text" placeholder="e.g. 1736328474792254" value="{{ request.form.get('sc_transaction_id','') }}" />
+              </div>
+              <div class="form-group">
+                <label for="transaction_id">SELFCARE Backend Transaction ID</label>
+                <input id="transaction_id" name="transaction_id" type="text" placeholder="e.g. 1736328474792252254" value="{{ request.form.get('transaction_id','') }}" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="time_span">Time Span</label>
+              <select id="time_span" name="time_span" required>
+                <option value="15">Last 15 minutes</option>
+                <option value="30">Last 30 minutes</option>
+                <option value="60">Last 1 hour</option>
+                <option value="180">Last 3 hours</option>
+                <option value="360">Last 6 hours</option>
+                <option value="720">Last 12 hours</option>
+                <option value="1440">Last 24 hours</option>
+                <option value="2880">Last 2 days</option>
+                <option value="4320">Last 3 days</option>
+                <option value="10080">Last 7 days</option>
+              </select>
+          </div>
+
+          <div class="form-group">
+            <label for="limit">Max rows</label>
+            <input id="limit" name="limit" type="number" min="1" max="5000" value="500" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button id="executeBtn" class="btn btn-primary" type="submit" disabled>Execute</button>
+        </div>
+      </form>
+    </section>
+
+    {% if results %}
+      {% if results.error %}
+        <div class="alert alert-error">{{ results.error }}</div>
+      {% else %}
+        <section class="card">
+          <div class="card-title">Query Results</div>
+          <div class="result-meta">
+            <div>
+              <strong>Application:</strong> {{ results.app_name }}
+            </div>
+            <div>
+              <strong>JSession ID:</strong> {{ results.jsession_id or '—' }}
+            </div>
+            <div>
+              <strong>Time range:</strong>
+              Last
+              {% if results.time_span == '15' %}15 Minutes{% elif results.time_span == '30' %}30 Minutes{% elif results.time_span == '60' %}1 Hour{% else %}{{ results.time_span }} Minutes{% endif %}
+              ({{ results.start_time }} → {{ results.end_time }})
+            </div>
+            <div>
+              <strong>Rows:</strong> {{ results.count }}
+            </div>
+          </div>
+
+          {% if results.rows %}
+          <form id="exportForm" action="{{ url_for('export_excel') }}" method="post" class="card-cta">
+            <input type="hidden" name="application" value="{{ results.app_name }}" />
+            <input type="hidden" name="jsession_id" value="{{ results.jsession_id }}" />
+            <input type="hidden" name="time_span" value="{{ results.time_span }}" />
+            <input type="hidden" name="limit" value="{{ results.count }}" />
+            <!-- Preserve extra filters on export -->
+            <input type="hidden" name="backend_system" value="{{ request.form.get('backend_system','') }}" />
+            <input type="hidden" name="channel" value="{{ request.form.get('channel','') }}" />
+            <input type="hidden" name="sc_transaction_id" value="{{ request.form.get('sc_transaction_id','') }}" />
+            <input type="hidden" name="transaction_id" value="{{ request.form.get('transaction_id','') }}" />
+            <button type="submit" class="btn btn-primary">Export to Excel</button>
+          </form>
+          <div class="table-wrap">
+            <table class="data-table" id="logsTable">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="selectAll"></th>
+                  {% for col in results.columns %}<th>{{ col }}</th>{% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in results.rows %}
+                  <tr>
+                    <td><input type="checkbox" class="row-select"></td>
+                    {% for col in results.columns %}
+                      <td class="{{ 'level-' + row[col]|lower if col == 'level' else '' }}">{{ row[col] }}</td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div class="card-cta" style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+            <input type="email" id="emailInput" placeholder="Enter email to send selected logs" class="input-email" />
+            <button id="sendEmailBtn" class="btn btn-primary" type="button">Send Selected Logs to Email</button>
+            <span id="emailStatus" class="email-status"></span>
+          </div>
+          {% else %}
+            <div class="empty">No failure logs found for the given criteria.</div>
+          {% endif %}
+        </section>
+      {% endif %}
+    {% endif %}
+  </main>
+
+  <footer class="footer">
+    <span>© E& Developed by Etisalat</span>
+  </footer>
+
+  <script>
+    // Select all/none logic
+    const selectAll = document.getElementById('selectAll');
+    const rowCheckboxes = document.getElementsByClassName('row-select');
+    if (selectAll) {
+      selectAll.addEventListener('change', function() {
+        for (let cb of rowCheckboxes) cb.checked = selectAll.checked;
+      });
+    }
+
+    // Send selected logs to email
+    const sendEmailBtn = document.getElementById('sendEmailBtn');
+    if (sendEmailBtn) {
+      sendEmailBtn.addEventListener('click', async function() {
+        const email = document.getElementById('emailInput').value;
+        if (!email) { document.getElementById('emailStatus').textContent = 'Enter email.'; return; }
+        const table = document.getElementById('logsTable');
+        const headers = Array.from(table.querySelectorAll('thead th')).slice(1).map(th => th.textContent.trim());
+        const selectedRows = [];
+        for (let i = 0; i < rowCheckboxes.length; i++) {
+          if (rowCheckboxes[i].checked) {
+            const cells = rowCheckboxes[i].parentElement.parentElement.querySelectorAll('td');
+            const rowObj = {};
+            for (let j = 1; j < cells.length; j++) rowObj[headers[j-1]] = cells[j].textContent;
+            selectedRows.push(rowObj);
+          }
+        }
+        if (!selectedRows.length) { document.getElementById('emailStatus').textContent = 'Select at least one row.'; return; }
+        document.getElementById('emailStatus').textContent = 'Sending...';
+        const resp = await fetch('/send_selected_logs', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ rows: selectedRows, email })
+        });
+        const data = await resp.json();
+        if (data.success) document.getElementById('emailStatus').textContent = 'Sent!';
+        else document.getElementById('emailStatus').textContent = 'Error: ' + (data.error || 'Unknown');
+      });
+    }
+    // Enable Execute button only when required inputs are filled
+    const form = document.getElementById('logForm');
+    const appSel = document.getElementById('application');
+  const timeSpanEl = document.getElementById('time_span');
+    const execBtn = document.getElementById('executeBtn');
+
+    // Extra filter visibility
+    const extraFilters = document.getElementById('extraFilters');
+    const magentoFilters = document.getElementById('magentoFilters');
+    const selfcareFilters = document.getElementById('selfcareFilters');
+
+    function updateExtraFilters(){
+      const val = appSel.value;
+      // Reset
+      magentoFilters.style.display = 'none';
+      selfcareFilters.style.display = 'none';
+      extraFilters.style.display = 'none';
+      if (val === 'Magento UAT' || val === 'Magento PD' || val === 'Magento'){
+        extraFilters.style.display = '';
+        magentoFilters.style.display = '';
+      }
+      if (val === 'SELFCARE UAT' || val === 'SELFCARE PD' || val === 'B2C Selfcare'){
+        extraFilters.style.display = '';
+        selfcareFilters.style.display = '';
+      }
+    }
+
+    appSel.addEventListener('change', updateExtraFilters);
+    // Initial run to show filters after page render (if selected persisted)
+    updateExtraFilters();
+
+    function updateButtonState(){
+      const ok = appSel.value && timeSpanEl.value;
+      execBtn.disabled = !ok;
+    }
+
+    ['change','input'].forEach(evt => {
+      appSel.addEventListener(evt, updateButtonState);
+      timeSpanEl.addEventListener(evt, updateButtonState);
+    });
+
+    updateButtonState();
+  </script>
+</body>
+</html>

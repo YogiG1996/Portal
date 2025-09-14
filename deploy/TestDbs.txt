@@ -1,0 +1,108 @@
+B2C Front End Databse details : 
+
+Database type : Oracle 
+Columns should be shown onPortal : 
+
+ID                       NOT NULL NUMBER         
+BACKEND_URL                       VARCHAR2(1000) 
+BACKEND_SYSTEM_NAME               VARCHAR2(255)  
+REQUEST_HEADER                    CLOB           
+REQUEST_BODY                      CLOB           
+RESPONSE                          CLOB           
+RESPONSE_STATUS                   VARCHAR2(50)   
+STATR_TIME                        TIMESTAMP(6)   
+END_TIME                          TIMESTAMP(6)   
+TIME_CONSUMED_MILI                NUMBER         
+CHANNEL                           VARCHAR2(255)  
+KIOSK_ID                          VARCHAR2(255)  
+TRANSACTION_ID           NOT NULL VARCHAR2(255)  
+JSESSION_ID                       CLOB           
+THIRD_PARTY_REQUEST_BODY          CLOB           
+THIRD_PARTY_RESPONSE              CLOB           
+FE_REQUEST_BODY                   CLOB           
+FE_RESPONSE                       CLOB
+
+**********************************************************
+Selfcare DB 1 Datails 
+Database type : Oracle 
+Columns should be shown onPortal : 
+
+desc test_uat.test_transactions_logger
+Name                    Null Type           
+----------------------- ---- -------------- 
+SC_ID                        NUMBER(38)     
+SC_USER_NAME                 VARCHAR2(215)  
+SC_MSISDN                    VARCHAR2(200)  
+SC_TRANSACTION_ID            VARCHAR2(100)  
+SC_OPERATION                 VARCHAR2(500)  
+SC_SERVICE_NAME              VARCHAR2(1000) 
+SC_SESSION_TOKEN             VARCHAR2(200)  
+SC_OS_VERSION                VARCHAR2(200)  
+SC_STATUS                    VARCHAR2(100)  
+SC_REQUEST_TIME_IN           TIMESTAMP(6)   
+SC_REQUEST_PAYLOAD           CLOB           
+SC_RESPONSE_TIME_OUT         TIMESTAMP(6)   
+SC_RESPONSE_PAYLOAD          CLOB           
+SC_EXCEPTION_STACKTRACE      CLOB           
+SC_CHANNEL                   VARCHAR2(20)   
+SC_RESPONSE_CODE             VARCHAR2(20)   
+SC_RESPONSE_MESSAGE          VARCHAR2(4000) 
+SC_GUEST_SESSION             VARCHAR2(256)  
+SC_CUSTOMER_IP               VARCHAR2(255)  
+SC_CUSTOMER_IP1              VARCHAR2(255)  
+SC_ROUND_TRIP_TIME           NUMBER(38)     
+SC_HEADERS                   CLOB           
+AUDIT_TIMESTAMP              TIMESTAMP(6)   
+KIOSK_ID                     VARCHAR2(30)   
+AUDIT_TIMESTUMP              TIMESTAMP(6)   
+
+
+***************************************
+Selfcare DB 2 Datails 
+Database type : Oracle 
+Columns should be shown onPortal : 
+
+test_uat.test_transactions_lgr_be
+Name                 Null Type           
+-------------------- ---- -------------- 
+ID                        NUMBER         
+TRANSACTION_ID            VARCHAR2(255)  
+SERVICE_ORDER             NUMBER         
+SERVICE_INTERFACE         VARCHAR2(1024) 
+SERVICE_OPERATION         VARCHAR2(255)  
+REQUEST                   CLOB           
+REQUEST_TIME_IN           TIMESTAMP(6)   
+RESPONSE                  CLOB           
+RESPONSE_TIME_OUT         TIMESTAMP(6)   
+CHANNEL                   VARCHAR2(255)  
+RESPONSE_CODE             VARCHAR2(255)  
+RESPONSE_DESCRIPTION      VARCHAR2(3000) 
+ROUND_TRIP_TIME           NUMBER(38)     
+AUDIT_TIMESTAMP           TIMESTAMP(6)   
+SERVICE_NAME              VARCHAR2(255)  
+KIOSK_ID                  VARCHAR2(30)
+
+
+*********************************************
+
+Magento  DB 2 Datails 
+Database type : Oracle 
+Columns should be shown onPortal : 
+
+id	bigint	NO	PRI	 	auto_increment
+server_name	varchar(100)	YES	 	 	 
+transaction_id	varchar(200)	NO	 	 	 
+channel	varchar(100)	YES	 	 	 
+backend_system	varchar(50)	YES	 	 	 
+request_body	longtext	YES	 	 	 
+response_body	longtext	YES	 	 	 
+method_name	varchar(200)	YES	 	 	 
+request_time	timestamp	YES	 	 	 
+created_at	datetime	NO	 	CURRENT_TIMESTAMP	DEFAULT_GENERATED
+response_time	timestamp	YES	 	 	 
+round_time	float	YES	 	 	 
+session_id	varchar(200)	YES	MUL	 	 
+req_identifier_type	varchar(200)	YES	 	 	 
+end_point	varchar(200)	YES	 	 	 
+req_identifier_value	varchar(200)	YES	 	 	 
+failure	varchar(250)	YES	 	 	 

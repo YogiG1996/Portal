@@ -1,0 +1,1375 @@
+2025-09-13 19:51:52,771 WARNING werkzeug  * Debugger is active!
+2025-09-13 19:51:52,776 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-13 19:52:34,448 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-13 19:52:34,451 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-13 19:52:34,454 INFO werkzeug  * Restarting with stat
+2025-09-13 19:52:36,229 WARNING werkzeug  * Debugger is active!
+2025-09-13 19:52:36,232 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-13 19:52:38,498 INFO root REQ start 127.0.0.1 POST /query params={} form={'application': 'Magento', 'jsession_id': '', 'time_span': '4320', 'limit': '500'}
+2025-09-13 19:52:38,499 INFO root API Request: app_name=Magento, jsession_id=None, time_span=4320, limit=500
+2025-09-13 19:52:38,542 INFO root Query returned 300 rows. Columns: ['id', 'event_time', 'app_name', 'level', 'jsession_id', 'message']
+2025-09-13 19:52:38,546 INFO root API Response: 300 rows from 2025-09-10 14:22 to 2025-09-13 14:22
+2025-09-13 19:52:38,568 INFO root REQ done 127.0.0.1 POST /query status=200 duration_ms=73
+2025-09-13 19:52:38,569 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:52:38] "POST /query HTTP/1.1" 200 -
+2025-09-13 19:52:38,606 INFO root REQ start 127.0.0.1 GET /static/css/styles.css params={} form={}
+2025-09-13 19:52:38,661 INFO root REQ done 127.0.0.1 GET /static/css/styles.css status=304 duration_ms=54
+2025-09-13 19:52:38,664 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:52:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-13 19:52:45,867 INFO root REQ start 127.0.0.1 GET /static/img/logo.png params={} form={}
+2025-09-13 19:52:45,868 ERROR root Unhandled exception during request 127.0.0.1 GET /static/img/logo.png
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 305, in send_static_file
+    return send_from_directory(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\werkzeug\utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-13 19:52:45,871 INFO root REQ done 127.0.0.1 GET /static/img/logo.png status=500 duration_ms=4
+2025-09-13 19:52:45,873 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:52:45] "[35m[1mGET /static/img/logo.png HTTP/1.1[0m" 500 -
+2025-09-13 19:52:58,439 INFO root REQ start 127.0.0.1 POST /send_selected_logs params={} form={}
+2025-09-13 19:52:58,471 INFO root REQ done 127.0.0.1 POST /send_selected_logs status=500 duration_ms=33
+2025-09-13 19:52:58,472 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:52:58] "[35m[1mPOST /send_selected_logs HTTP/1.1[0m" 500 -
+2025-09-13 19:54:34,868 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-13 19:54:35,119 INFO werkzeug  * Restarting with stat
+2025-09-13 19:54:38,138 WARNING werkzeug  * Debugger is active!
+2025-09-13 19:54:38,148 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-13 19:54:57,762 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-13 19:54:58,130 INFO werkzeug  * Restarting with stat
+2025-09-13 19:55:00,954 WARNING werkzeug  * Debugger is active!
+2025-09-13 19:55:00,959 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-13 19:55:05,181 INFO root REQ start 127.0.0.1 POST /send_selected_logs params={} form={}
+2025-09-13 19:55:05,237 INFO root REQ done 127.0.0.1 POST /send_selected_logs status=500 duration_ms=93
+2025-09-13 19:55:05,240 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:55:05] "[35m[1mPOST /send_selected_logs HTTP/1.1[0m" 500 -
+2025-09-13 19:55:09,625 INFO root REQ start 127.0.0.1 POST /send_selected_logs params={} form={}
+2025-09-13 19:55:09,635 INFO root REQ done 127.0.0.1 POST /send_selected_logs status=500 duration_ms=9
+2025-09-13 19:55:09,638 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:55:09] "[35m[1mPOST /send_selected_logs HTTP/1.1[0m" 500 -
+2025-09-13 19:55:18,038 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-13 19:55:18,225 INFO werkzeug  * Restarting with stat
+2025-09-13 19:55:19,973 WARNING werkzeug  * Debugger is active!
+2025-09-13 19:55:19,977 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-13 19:55:21,204 INFO root REQ start 127.0.0.1 POST /send_selected_logs params={} form={}
+2025-09-13 19:55:21,286 INFO root REQ done 127.0.0.1 POST /send_selected_logs status=500 duration_ms=83
+2025-09-13 19:55:21,303 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:55:21] "[35m[1mPOST /send_selected_logs HTTP/1.1[0m" 500 -
+2025-09-13 19:55:34,351 INFO root REQ start 127.0.0.1 POST /send_selected_logs params={} form={}
+2025-09-13 19:55:34,357 INFO root REQ done 127.0.0.1 POST /send_selected_logs status=500 duration_ms=4
+2025-09-13 19:55:34,357 INFO werkzeug 127.0.0.1 - - [13/Sep/2025 19:55:34] "[35m[1mPOST /send_selected_logs HTTP/1.1[0m" 500 -
+2025-09-14 13:31:15,757 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 13:31:15,758 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 13:31:15,761 INFO werkzeug  * Restarting with stat
+2025-09-14 13:31:17,399 WARNING werkzeug  * Debugger is active!
+2025-09-14 13:31:17,406 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 13:31:29,932 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 13:31:29,934 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 13:31:29,938 INFO werkzeug  * Restarting with stat
+2025-09-14 13:31:31,478 WARNING werkzeug  * Debugger is active!
+2025-09-14 13:31:31,484 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 13:31:36,752 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 348, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 13:31:36,774 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:31:36] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 13:31:41,058 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 348, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 13:31:41,062 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:31:41] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 13:31:55,240 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\test_seed_dbs.py', reloading
+2025-09-14 13:31:55,397 INFO werkzeug  * Restarting with stat
+2025-09-14 13:31:56,992 WARNING werkzeug  * Debugger is active!
+2025-09-14 13:31:56,996 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 13:32:06,388 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\test_seed_dbs.py', reloading
+2025-09-14 13:32:06,536 INFO werkzeug  * Restarting with stat
+2025-09-14 13:32:08,072 WARNING werkzeug  * Debugger is active!
+2025-09-14 13:32:08,076 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 13:32:33,961 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 348, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 13:32:33,985 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:32:33] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 13:32:39,845 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 348, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 13:32:39,847 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:32:39] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 13:32:57,624 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_dbs.py', reloading
+2025-09-14 13:32:57,820 INFO werkzeug  * Restarting with stat
+2025-09-14 13:32:59,551 WARNING werkzeug  * Debugger is active!
+2025-09-14 13:32:59,556 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 13:34:48,377 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 13:34:48,378 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 13:34:48,380 INFO werkzeug  * Restarting with stat
+2025-09-14 13:34:50,183 WARNING werkzeug  * Debugger is active!
+2025-09-14 13:34:50,191 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 13:34:52,565 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:34:52] "GET / HTTP/1.1" 200 -
+2025-09-14 13:34:52,742 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:34:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 13:34:52,827 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 13:34:52,834 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:34:52] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 13:34:59,504 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 348, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 13:34:59,511 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:34:59] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 13:34:59,566 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:34:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 13:34:59,589 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 13:34:59,591 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:34:59] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 13:35:08,698 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 348, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 13:35:08,700 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:35:08] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 13:35:08,735 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:35:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 13:35:08,752 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 13:35:08,753 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 13:35:08] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 13:52:51,044 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 13:52:51,045 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 13:52:51,048 INFO werkzeug  * Restarting with stat
+2025-09-14 13:52:52,428 WARNING werkzeug  * Debugger is active!
+2025-09-14 13:52:52,435 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 13:53:03,748 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:03] "GET / HTTP/1.1" 200 -
+2025-09-14 13:53:03,844 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:03] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-14 13:53:03,894 WARNING root HTTP exception during request 192.168.1.2 GET /static/img/logo.png: 404 Not Found
+2025-09-14 13:53:03,896 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:03] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 13:53:03,900 WARNING root HTTP exception during request 192.168.1.2 GET /favicon.ico: 404 Not Found
+2025-09-14 13:53:03,902 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-14 13:53:10,084 ERROR root Unhandled exception during request 192.168.1.2 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 348, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 13:53:10,177 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:10] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 13:53:10,221 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 13:53:10,243 WARNING root HTTP exception during request 192.168.1.2 GET /static/img/logo.png: 404 Not Found
+2025-09-14 13:53:10,244 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:10] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 13:53:56,962 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:56] "POST /query HTTP/1.1" 200 -
+2025-09-14 13:53:57,000 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 13:53:57,049 WARNING root HTTP exception during request 192.168.1.2 GET /static/img/logo.png: 404 Not Found
+2025-09-14 13:53:57,050 INFO werkzeug 192.168.1.2 - - [14/Sep/2025 13:53:57] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:09:35,457 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:09:35,711 INFO werkzeug  * Restarting with stat
+2025-09-14 14:09:39,993 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:09:39,997 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:09:54,101 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 347, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 14:09:54,214 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:09:54] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:10:10,191 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:10:10,537 INFO werkzeug  * Restarting with stat
+2025-09-14 14:10:12,301 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:10:12,304 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:10:56,365 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 347, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 219, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 211, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_B2C_FE}'
+2025-09-14 14:10:56,388 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:10:56] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:12:03,156 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:12:03,354 INFO werkzeug  * Restarting with stat
+2025-09-14 14:12:05,248 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:12:05,252 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:13:45,513 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 14:13:45,514 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 14:13:45,520 INFO werkzeug  * Restarting with stat
+2025-09-14 14:13:47,087 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:13:47,091 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:14:47,923 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:14:48,110 INFO werkzeug  * Restarting with stat
+2025-09-14 14:14:48,438 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:14:48,646 INFO werkzeug  * Restarting with stat
+2025-09-14 14:14:49,868 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:14:49,876 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:14:50,396 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:14:50,404 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:25:06,367 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:25:06,564 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:25:06,700 INFO werkzeug  * Restarting with stat
+2025-09-14 14:25:06,866 INFO werkzeug  * Restarting with stat
+2025-09-14 14:25:10,162 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:25:10,169 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:25:10,251 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:25:10,263 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:29:45,160 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:29:45,332 INFO werkzeug  * Restarting with stat
+2025-09-14 14:29:49,299 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:29:49,302 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:30:27,862 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_production_dbs.py', reloading
+2025-09-14 14:30:28,048 INFO werkzeug  * Restarting with stat
+2025-09-14 14:30:29,784 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:30:29,787 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:30:38,600 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_production_dbs.py', reloading
+2025-09-14 14:30:38,794 INFO werkzeug  * Restarting with stat
+2025-09-14 14:30:40,412 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:30:40,415 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:31:06,993 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_production_dbs.py', reloading
+2025-09-14 14:31:07,186 INFO werkzeug  * Restarting with stat
+2025-09-14 14:31:08,801 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:31:08,805 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:31:31,939 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 14:31:31,940 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 14:31:31,942 INFO werkzeug  * Restarting with stat
+2025-09-14 14:31:33,656 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:31:33,662 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:31:37,426 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:31:37] "GET / HTTP/1.1" 200 -
+2025-09-14 14:31:37,538 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:31:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:31:37,594 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:31:37,596 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:31:37] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:31:46,473 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 225, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 217, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_FE_UAT}'
+2025-09-14 14:31:46,610 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:31:46] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:31:46,669 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:31:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:31:46,682 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:31:46,683 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:31:46] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:32:20,849 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 225, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 217, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_SELFCARE_UAT}'
+2025-09-14 14:32:20,853 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:32:20] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:32:20,891 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:32:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:32:20,908 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:32:20,909 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:32:20] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:32:27,450 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 225, in query_logs
+    engine = _get_engine(db_info['connection_string'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 217, in _get_engine
+    return create_engine(uri, pool_pre_ping=True, future=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\create.py", line 546, in create_engine
+    u = _url.make_url(url)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 842, in make_url
+    return _parse_url(name_or_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\url.py", line 908, in _parse_url
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse SQLAlchemy URL from string '${DB_URI_FE_PD}'
+2025-09-14 14:32:27,452 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:32:27] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:32:27,497 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:32:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:32:27,523 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:32:27,524 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:32:27] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:34:32,641 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_production_dbs.py', reloading
+2025-09-14 14:34:32,824 INFO werkzeug  * Restarting with stat
+2025-09-14 14:34:34,610 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:34:34,614 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:35:13,354 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_production_dbs.py', reloading
+2025-09-14 14:35:13,540 INFO werkzeug  * Restarting with stat
+2025-09-14 14:35:15,263 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:35:15,267 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:35:43,999 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:35:44,109 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:35:44] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:35:44,186 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:35:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:35:44,201 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:35:44,202 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:35:44] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:37:24,326 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: sysdate
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: sysdate
+[SQL: select * from b2c_audit_log where (? IS NULL OR jsession_id = ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:37:24,330 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:37:24] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:37:41,742 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: sysdate
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: sysdate
+[SQL: select * from b2c_audit_log where (? IS NULL OR jsession_id = ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:37:41,746 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:37:41] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:37:55,697 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 14:37:55,698 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 14:37:55,702 INFO werkzeug  * Restarting with stat
+2025-09-14 14:37:57,653 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:37:57,660 INFO werkzeug  * Debugger PIN: 110-430-285
+2025-09-14 14:38:00,663 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 14:38:00,664 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 14:38:00,667 INFO werkzeug  * Restarting with stat
+2025-09-14 14:38:03,694 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:38:03,699 INFO werkzeug  * Debugger PIN: 110-430-285
+2025-09-14 14:38:12,770 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:38:12,776 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:38:12] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:38:19,404 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: test_logging.outbound_call_log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: test_logging.outbound_call_log
+[SQL: SELECT * FROM test_logging.outbound_call_log WHERE (? IS NULL OR backend_system = ?) AND (? IS NULL OR channel = ?) ORDER BY id DESC LIMIT ?]
+[parameters: (None, None, None, None, 10)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:38:19,408 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:38:19] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:38:25,595 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: test_uat.test_transactions_logger
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: test_uat.test_transactions_logger
+[SQL: SELECT * FROM test_uat.test_transactions_logger WHERE (? IS NULL OR sc_transaction_id = ?)]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:38:25,604 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:38:25] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:38:30,130 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:38:30,134 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:38:30] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:38:30,172 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:38:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:38:30,190 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:38:30,191 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:38:30] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:38:54,209 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_production_dbs.py', reloading
+2025-09-14 14:38:54,400 INFO werkzeug  * Restarting with stat
+2025-09-14 14:38:54,595 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\seed_production_dbs.py', reloading
+2025-09-14 14:38:54,790 INFO werkzeug  * Restarting with stat
+2025-09-14 14:38:56,340 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:38:56,346 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:38:56,748 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:38:56,756 INFO werkzeug  * Debugger PIN: 110-430-285
+2025-09-14 14:39:00,179 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:39:00,212 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:39:00] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:39:00,245 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: test_logging.outbound_call_log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: test_logging.outbound_call_log
+[SQL: SELECT * FROM test_logging.outbound_call_log WHERE (? IS NULL OR backend_system = ?) AND (? IS NULL OR channel = ?) ORDER BY id DESC LIMIT ?]
+[parameters: (None, None, None, None, 10)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:39:00,250 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:39:00] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:39:00,261 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: test_uat.test_transactions_logger
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 358, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 249, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: test_uat.test_transactions_logger
+[SQL: SELECT * FROM test_uat.test_transactions_logger WHERE (? IS NULL OR sc_transaction_id = ?)]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:39:00,268 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:39:00] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:39:16,623 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:39:16,775 INFO werkzeug  * Restarting with stat
+2025-09-14 14:39:17,245 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:39:17,473 INFO werkzeug  * Restarting with stat
+2025-09-14 14:39:18,890 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:39:18,902 INFO werkzeug  * Debugger PIN: 110-430-285
+2025-09-14 14:39:19,782 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:39:19,787 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:39:24,654 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 384, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 275, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:39:24,685 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:39:24] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:41:22,560 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 384, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 275, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:41:22,564 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:41:22] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:42:05,467 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 384, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 275, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:42:05,470 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:42:05] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:42:48,392 ERROR root Unhandled exception during request 127.0.0.1 POST /query
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: log
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 384, in query
+    rows, columns = query_logs(app_name, jsession_id, start_dt, end_dt, limit)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\Downloads\etisalat_logs_portal\app.py", line 275, in query_logs
+    result = conn.execute(text(db_info['select_query']), params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\yogesgho\AppData\Roaming\Python\Python312\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
+[SQL: select * from log where (? IS NULL OR jsession_id LIKE ?) and statr_time > sysdate - 1 order by id desc]
+[parameters: (None, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-14 14:42:48,395 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:42:48] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2025-09-14 14:43:30,114 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:43:30,317 INFO werkzeug  * Restarting with stat
+2025-09-14 14:43:30,981 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\app.py', reloading
+2025-09-14 14:43:31,193 INFO werkzeug  * Restarting with stat
+2025-09-14 14:43:34,874 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:43:34,879 INFO werkzeug  * Debugger PIN: 110-430-285
+2025-09-14 14:43:35,642 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:43:35,651 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 14:43:51,225 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:43:51] "POST /query HTTP/1.1" 200 -
+2025-09-14 14:43:51,310 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:43:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:43:51,371 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:43:51,373 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:43:51] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:46:36,687 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:46:36] "POST /query HTTP/1.1" 200 -
+2025-09-14 14:46:36,733 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:46:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:46:36,778 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:46:36,780 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:46:36] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:48:15,296 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:48:15] "POST /query HTTP/1.1" 200 -
+2025-09-14 14:48:15,345 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:48:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:48:15,409 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:48:15,410 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:48:15] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:49:17,903 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+2025-09-14 14:49:17,904 INFO werkzeug [33mPress CTRL+C to quit[0m
+2025-09-14 14:49:17,906 INFO werkzeug  * Restarting with stat
+2025-09-14 14:49:20,152 WARNING werkzeug  * Debugger is active!
+2025-09-14 14:49:20,157 INFO werkzeug  * Debugger PIN: 110-430-285
+2025-09-14 14:49:21,763 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:21] "POST /query HTTP/1.1" 200 -
+2025-09-14 14:49:21,808 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:49:21,876 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:49:21,877 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:21] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:49:27,233 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:27] "POST /query HTTP/1.1" 200 -
+2025-09-14 14:49:27,267 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:49:27,324 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:49:27,326 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:27] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:49:35,327 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:35] "GET / HTTP/1.1" 200 -
+2025-09-14 14:49:35,367 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:49:35,698 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:49:35,714 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:49:35] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:51:53,843 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:51:53] "GET / HTTP/1.1" 200 -
+2025-09-14 14:51:53,896 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:51:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:51:53,915 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:51:53,921 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:51:53] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:51:54,898 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:51:54] "GET / HTTP/1.1" 200 -
+2025-09-14 14:51:54,938 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:51:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:51:54,958 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:51:54,959 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:51:54] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:52:04,730 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:04] "GET / HTTP/1.1" 200 -
+2025-09-14 14:52:04,783 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:04] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-14 14:52:04,797 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:52:04,800 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:04] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:52:12,820 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:12] "GET / HTTP/1.1" 200 -
+2025-09-14 14:52:12,988 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:12] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-14 14:52:13,232 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:52:13,285 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:13] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:52:15,324 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:15] "GET / HTTP/1.1" 200 -
+2025-09-14 14:52:15,359 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:52:15,378 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:52:15,379 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:15] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:52:16,970 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:16] "GET / HTTP/1.1" 200 -
+2025-09-14 14:52:17,002 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:52:17,023 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:52:17,025 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:17] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:52:46,257 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:46] "GET / HTTP/1.1" 200 -
+2025-09-14 14:52:46,287 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:46] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-14 14:52:46,301 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:52:46,303 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:46] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:52:56,688 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:56] "POST /query HTTP/1.1" 200 -
+2025-09-14 14:52:56,726 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:52:56,739 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:52:56,739 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:52:56] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 14:53:00,236 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:53:00] "POST /query HTTP/1.1" 200 -
+2025-09-14 14:53:00,267 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:53:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-14 14:53:00,306 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
+2025-09-14 14:53:00,307 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:53:00] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
