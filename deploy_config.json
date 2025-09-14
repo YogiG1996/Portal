@@ -1,0 +1,11 @@
+{
+  "SMTP_SETTINGS": {
+    "SMTP_SERVER": "smtp.example.com",
+    "SMTP_PORT": 587,
+    "SMTP_USERNAME": "",
+    "SMTP_PASSWORD": "",
+    "USE_TLS": true,
+    "SENDER_EMAIL": "noreply@example.com",
+    "ADMIN_EMAIL": "admin@example.com"
+  }
+}

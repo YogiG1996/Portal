@@ -1373,3 +1373,15 @@ sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: log
 2025-09-14 14:53:00,267 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:53:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2025-09-14 14:53:00,306 WARNING root HTTP exception during request 127.0.0.1 GET /static/img/logo.png: 404 Not Found
 2025-09-14 14:53:00,307 INFO werkzeug 127.0.0.1 - - [14/Sep/2025 14:53:00] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-09-14 16:25:19,255 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\test_oracle.py', reloading
+2025-09-14 16:25:19,584 INFO werkzeug  * Restarting with stat
+2025-09-14 16:25:23,441 WARNING werkzeug  * Debugger is active!
+2025-09-14 16:25:23,448 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 16:34:40,755 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\test_oracle_connection.py', reloading
+2025-09-14 16:34:40,940 INFO werkzeug  * Restarting with stat
+2025-09-14 16:34:44,961 WARNING werkzeug  * Debugger is active!
+2025-09-14 16:34:44,968 INFO werkzeug  * Debugger PIN: 969-627-804
+2025-09-14 16:43:33,176 INFO werkzeug  * Detected change in 'C:\\Users\\yogesgho\\Downloads\\etisalat_logs_portal\\test_oracle_connection.py', reloading
+2025-09-14 16:43:33,453 INFO werkzeug  * Restarting with stat
+2025-09-14 16:43:36,941 WARNING werkzeug  * Debugger is active!
+2025-09-14 16:43:36,946 INFO werkzeug  * Debugger PIN: 969-627-804
